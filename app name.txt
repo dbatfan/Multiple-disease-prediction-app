@@ -1,0 +1,97 @@
+multiple-disease-predictoion-app-docker
+
+
+
+docker build command( docker build -t multi-disease-predictor --tag v:1
+.0 .
+)
+
+dbatfan/multiple-disease-prediction-streamlit-app
+
+
+1. Install required dependencies on local:
+
+```commandline
+pip install -r requirements.txt
+```
+
+
+2. Test the streamlit app on local:
+
+```
+streamlit run app.py
+```
+
+
+3.Windows: You can start Docker engine from Docker Desktop.
+
+
+4.
+docker build -t multi-disease-predictor --tag v:1
+.0 .
+
+5. witch to Home Directory:
+
+```
+cd ~
+```
+
+
+6.List the built Docker images
+```
+docker images
+```
+
+7. Start a container:
+```commandline
+docker run -p 80:80 Image_ID
+```
+
+8.For Windows, go to http://localhost/.
+
+
+9. In a different terminal window, you can check the running containers with:
+```
+docker ps
+```
+
+10. Stop the container:
+ - Use `ctrl + c` or stop it from Docker Desktop.
+
+11. Check all containers:
+ ```
+docker ps -a
+ ```
+12. Delete the container if you are not going to run this again:
+ ```
+docker container prune
+ ```
+
+### Pushing the docker image to Docker Hub
+
+13. Sign up on Docker Hub.
+
+14. Create a repository on Docker Hub.
+
+15. Log in to Docker Hub from the terminal. You can log in with your password or access token.
+```
+docker login
+```
+
+17. Tag your local Docker image to the Docker Hub repository:
+ ```
+docker tag Image_ID username/repo-name:tag
+ ```
+
+17. Push the local Docker image to the Docker Hub repository:
+ ```
+docker push username/repo-name:tag
+ ```
+
+(If you want to delete the image, you can delete the repository in Docker Hub and force delete it locally.)
+
+18. Command to force delete an image (but don't do this yet):
+ ```
+docker rmi -f IMAGE_ID
+ ```
+
